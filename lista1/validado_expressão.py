@@ -1,5 +1,4 @@
 parenteses = str(input('Informe a formula matemática: '))
-soma = 1+1
 pares = []
 for j in (parenteses):
     if j == '(':
@@ -10,7 +9,6 @@ for j in (parenteses):
         else:
             pares.append(')')
             break
-print(soma)
 if len(pares) == 0:
     print('A expressão está correta.')
 else:
