@@ -6,7 +6,7 @@ trabalhador['idade'] = date.today().year - idade
 trabalhador['carteira'] = int(input('Carteira de trabalho (Digite 0 se não tiver): '))
 if trabalhador['carteira'] != 0:
     trabalhador['contratação'] = int(input('Ano de contratação: '))
-    trabalhador['salário'] = float(input('Salário: '))
+    trabalhador['salário'] = float(input('Salário: R$'))
     trabalhador['aposentadoria'] = 35 - (date.today().year - trabalhador['contratação']) + trabalhador['idade']
 for j, i in trabalhador.items():
     print(f'- {j} sendo {i}')
