@@ -27,7 +27,7 @@ for i in range(0, len(informações)):
 for j in range(0, len(informações)):
     media += informações[j]['idade'] 
 print(f'A) Foram ao todo cadastrados {cadastrados} pessoas.')
-print(f'B) A média de idade é de {(media/cadastrados):.2f}.')
+print(f'B) A média de idade é de {(media/cadastrados):.1f}.')
 print(f'C) As mulheres cadastradas foram: ', end='')
 for i in informações:
     if i['sexo'] == 'F':
