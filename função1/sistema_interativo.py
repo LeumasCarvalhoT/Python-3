@@ -10,15 +10,15 @@ def ajuda(com):
     help(com)
 def titulo(m, color=0):
     t = len(m) +2
-    print('\033[0;30;42m')
+    print(l_c[color])
     print('~'*t)
     print(f" {m}")
     print('~'*t)
-    print('\033[m')
+    print(l_c[0])
 comando = ''
 while True:
     titulo('Sistema Ajuda, Python', 2)
-    comando = str(input('Função ou Biblioteca > '))
+    comando = str(input("Função ou Biblioteca (Digite um 'FIM' para finalizar): "))
     titulo(f'Acessando o manual do camando {comando}', 4)
     if comando.upper() == 'FIM':
         break
@@ -26,4 +26,4 @@ while True:
         print(l_c[6])
         ajuda(comando)
         print(l_c[0])
-titulo('Adeus', 1)
+titulo('ATÉ BREVE', 1)
