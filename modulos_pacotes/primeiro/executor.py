@@ -1,6 +1,6 @@
 from dindim.equações import meu_modulo
 from dindim.formatação import util
 
-valor = util.anti_dor(('Digite um valor: '))
+valor = util.anti_dor(('Digite um valor: R$'))
 taxa = int(input('Qual o valor da taxa? '))
 meu_modulo.reduzidor(valor, taxa)
