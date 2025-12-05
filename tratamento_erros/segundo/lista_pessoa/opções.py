@@ -1,5 +1,6 @@
 from lista_pessoa.capa import *
 from lista_pessoa.arquivo import *
+import os
 arq = 'Sua_Lista.txt'
 if arqexiste(arq):
     print(f'Arquivo {arq} encontrado.')
@@ -10,12 +11,13 @@ def execuções(op):
     m_capa()
     while True:
         escolha = str(input(op))
+        os.system('cls')
         if escolha == '1':
             print('---'*10)
             print(f'{'Pessoas Cadastradas':^30}')
             print('---'*10)
             AbrirArquivo(arq)
-            m_capa()
+            so_opcoes()
             continue
         elif escolha == '2':
             print('---'*10)
@@ -24,7 +26,7 @@ def execuções(op):
             nome = str(input('Nome: '))
             idade = lendo_int('Idade: ')
             cadastrando(arq, nome, idade)
-            m_capa()
+            so_opcoes()
             continue
         elif escolha.strip().isalpha():
             print('\033[31mERRO! Digite um número inteiro válido.\033[m')
